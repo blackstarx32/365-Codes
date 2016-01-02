@@ -75,8 +75,7 @@
 			update: function(target) {
 
 				var dx = target.x - this.x,
-					dy = target.y - this.y,
-					dist = Math.sqrt(dx * dx + dy * dy);
+					dy = target.y - this.y;
 
 				this.vx = dx * this.ex;
 				this.vy = dy * this.ey;
@@ -130,9 +129,7 @@
 			ctx.globalCompositeOperation = "lighter";
 
 			var dx = (mouse.x - pointFollower.x),
-				dy = (mouse.y - pointFollower.y),
-				dist = Math.sqrt(dx * dx + dy * dy),
-				target = null;
+				dy = (mouse.y - pointFollower.y);
 
 			pointFollower.x += dx * 0.1;
 			pointFollower.y += dy * 0.1;
