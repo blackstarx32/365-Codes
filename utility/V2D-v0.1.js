@@ -1,10 +1,12 @@
 /**
- * V2D v0.1
+ * V2D.js v0.1
  */
 
-var V2D = (function() {
+"use strict";
 
-	"use strict";
+var V2D = (function(init) {
+	return init(window);
+})(function(window, undefined) {
 
 	function V2D(x, y) {
 		this.x = x;
@@ -79,4 +81,4 @@ var V2D = (function() {
 		div: div
 	};
 
-})();
+});
