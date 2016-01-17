@@ -73,12 +73,30 @@ var V2D = (function(init) {
 		return create(v.x / value, v.y / value);
 	}	
 
+	function dist(v1, v2) {
+		var dx = v1.x - v2.x,
+			dy = v1.y - v2.y;
+
+		return Math.sqrt(dx * dx + dy * dy);
+	}
+
+	function angleTo(v1, v2) {
+
+		var dx = v1.x - v2.x,
+			dy = v1.y - v2.y;
+
+		return Math.atan2(dy, dx);
+
+	}
+
 	return {
 		create: create,
 		add: add,
 		sub: sub,
 		mult: mult,
-		div: div
+		div: div,
+		dist: dist,
+		angleTo: angleTo
 	};
 
 });
